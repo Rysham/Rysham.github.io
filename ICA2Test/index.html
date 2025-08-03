@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICA2</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- Main Header Bar -->
+    <header class="main-header">
+    <h1>Athlete Essentials</h1>
+    <nav class="inlineNav">
+  <div class="nav-wrapper">
+    <div class="nav-left">
+      <button id="page1btn">Training Methods</button>
+      <button id="page2btn">Nutrition</button>
+      <button id="page3btn">Recovery</button>
+      <button id="page4btn">Mental Toughness</button>
+    </div>
+    <div class="nav-right">
+      <button id="btnFS">FullScreen</button>
+      <button id="btnWS">Exit Full Screen</button>
+    </div>
+  </div>
+    </nav>
+  </header>
+
+  <main id="pagecontainer">
+    <!-- ✅ Homepage content should now show -->
+<section id="homepage" class="page homepage">
+  <div class="homepage-overlay">
+    <h2>Welcome to Athlete Essentials</h2>
+    <p>
+      Ever wondered how athletes train? This site explores essential aspects of athletic performance. 
+      How they train, what they eat, and how they prepare themselves for their respective sports will be covered.
+    </p>
+    <img src="Images/QR_ICA2.png" class="QRimg">
+
+
+    <!-- Needed for in each html file, at the very end  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- get icons from https://www.favicon.cc -->
+    <link rel="manifest" href="manifest.json" /> <!--for android-->
+  </div>
+</section>
+
+    <!-- Page 1 -->
+    <section class="page" id="page1">
+      <h2>Training Methods for Athletes</h2>
+      <h3>Plyometric Training</h3>
+      <p>
+        Plyometric Training involves explosive movements like box jumps, jump squats, and bounding. The 
+        goal is to develop power and speed, using the body's stretch-shortening cycle to increase muscle 
+        output. Plyo is common in sports like football, basketball, and track.
+      </p>
+      <img src="images/Plyometrics.jpeg" class="tempimg" > 
+
+      <h3>Sport-Specific Training</h3>
+      <p>
+        Sport-Specific Training tailors exercises to the movements needed in competition. For example, a 
+        footballer might work on sprint drills, lateral movement, and shooting under fatigue — all 
+        replicating match conditions.
+      </p>
+      <img src="images/SportSpecificTraining.jpeg" class="tempimg" > 
+
+      <h3>Comparison to General Fitness</h3>
+      <p>
+        In contrast, the average person's workout usually consists of basic cardio (jogging, cycling) 
+        and general weightlifting (bench press, curls). It's not bad — it's just not targeted for elite 
+        performance. Athletes often focus on compound lifts (like squats and deadlifts) combined with
+        mobility drills, resistance band work, and unilateral training (like single-leg RDLs) to simulate 
+        real-game imbalances.
+      </p>
+
+      <h3>Explosiveness vs. Endurance</h3>
+      <p>
+        Athletes also train for energy systems — for example, footballers mix aerobic and anaerobic
+        training (HIIT, sprints) to match the stop-go nature of a game. It's not about "just running" — 
+        it's running with purpose, under load, with fatigue.
+      </p>
+
+      <h3>Technical training</h3>
+      <p>
+        On top of the other intense training, athletes have to master the techniques for their sport. For
+        example, footballers need to ensure that they are able to control the ball well and pass or shoot 
+        well, while boxers need to be able to defend and throw punches at their opponents.
+      </p>
+      <img src="images/techniqueTraining.jpeg" class="tempimg" > 
+
+          <h1>MCQ Quiz</h1>
+
+<fieldset>
+  <legend>1. What is the main goal of plyometric training?</legend>
+  <input type="radio" name="q1" value="Endurance"> Endurance
+  <input type="radio" name="q1" value="Flexibility"> Flexibility
+  <input type="radio" name="q1" value="Power"> Power
+  <input type="radio" name="q1" value="Weight loss"> Weight loss
+</fieldset>
+
+<fieldset>
+  <legend>2. Which of the following is considered sport-specific training for a footballer?</legend>
+  <input type="radio" name="q2" value="Bench press"> Bench press
+  <input type="radio" name="q2" value="Lateral sprint drills"> Lateral sprint drills
+  <input type="radio" name="q2" value="Yoga stretching"> Yoga stretching
+  <input type="radio" name="q2" value="Bicep curls"> Bicep curls
+</fieldset>
+
+<fieldset>
+  <legend>3. What does unilateral training focus on?</legend>
+  <input type="radio" name="q3" value="Working both legs at once"> Working both legs at once
+  <input type="radio" name="q3" value="Single-limb movement"> Single-limb movement
+  <input type="radio" name="q3" value="Only bodyweight exercises"> Only bodyweight exercises
+  <input type="radio" name="q3" value="Stretching with resistance bands"> Stretching with resistance bands
+</fieldset>
+
+<fieldset>
+  <legend>4. What energy system is targeted by sprint intervals?</legend>
+  <input type="radio" name="q4" value="Aerobic"> Aerobic
+  <input type="radio" name="q4" value="Anaerobic"> Anaerobic
+  <input type="radio" name="q4" value="Metabolic"> Metabolic
+  <input type="radio" name="q4" value="Cardiovascular"> Cardiovascular
+</fieldset>
+
+<fieldset>
+  <legend>5. Why is technical training important for athletes?</legend>
+  <input type="radio" name="q5" value="To build muscle faster"> To build muscle faster
+  <input type="radio" name="q5" value="To learn new sports"> To learn new sports
+  <input type="radio" name="q5" value="To master skills specific to their sport"> To master skills specific to their sport
+  <input type="radio" name="q5" value="To improve hydration"> To improve hydration
+</fieldset>
+
+<button id="btnSubmit">Submit Quiz</button>
+<h3 id="scorebox">Score:</h3>
+
+
+    </section>
+
+    <!-- Page 2 -->
+    <section class="page" id="page2">
+      <h2>Nutrition for Performance and Recovery</h2>
+      <h3>Pre-Game Nutrition</h3>
+      <p>
+        Pre-Game Nutrition focuses on loading up the body with carbohydrates (for quick energy), moderate
+        protein (for muscle support), and low fat/fiber (to avoid digestion issues). Think: pasta with 
+        lean chicken, or oats with banana and yogurt. Timing matters — ideally 2-3 hours before play.
+      </p>
+
+      <h3>Post-Game Recovery Meals</h3>
+      <p>
+        Post-Game Recovery Meals are all about replenishing glycogen stores and repairing muscle. This is
+        where protein and carbs are key — like chocolate milk, rice with beef, or a protein smoothie with
+        fruit. The first 30-60 minutes after exercise is a critical window for nutrient absorption.
+      </p>
+
+      <h3>Hydration</h3>
+      <p>
+        Hydration can make or break performance. A 1-2% drop in body water can lead to major declines in
+        output. Athletes track fluid loss (weighing before and after training) and replace fluids with 
+        water and electrolytes — especially sodium and potassium.
+      </p>
+      <img src="images/Hydration.jpeg" class="tempimg" > 
+
+      <h3>Supplements</h3>
+      <p>
+        Supplements are used, but smartly. Common ones include: Creatine (for power sports), Whey Protein
+        (for recovery), Caffeine (pre-workout energy), and Electrolyte tabs (hydration).
+      </p>
+
+      <h3>Nutrient Timing</h3>
+      <p>
+        Nutrient Timing is strategic — athletes eat before, during, and after workouts with intent. 
+        The average person might eat randomly or skip meals, but an athlete eats with purpose — to perform,
+        recover, and stay ready.
+      </p>
+
+      <h2>Catch the foods for recovery!</h2>
+        <div id="box">
+    <h2 id="scoreBox"></h2>
+    <img id="durianId" src="images/Banana.png" alt="durian image">
+        </div>
+
+
+    </section>
+
+    <!-- Page 3 -->
+    <section class="page" id="page3">
+      <h2>Recovery Techniques</h2>
+      <h3>Active Recovery</h3>
+      <p>
+        Active Recovery involves low-intensity movement — light cycling, swimming, or walking. It helps 
+        flush waste products (like lactic acid), improves circulation, and speeds up healing. It's a 
+        smarter alternative to doing nothing.
+      </p>
+      <img src="images/ActiveRecovery.jpeg" class="tempimg" > 
+
+      <h3>Stretching & Mobility</h3>
+      <p>
+        Stretching & Mobility work (both dynamic and static) helps maintain flexibility, joint health, 
+        and range of motion. Athletes often use mobility drills (like hip openers or ankle mobility work) 
+        to prevent stiffness and future injuries.
+      </p>
+      <img src="images/StretchingAndMobility.jpeg" class="tempimg" > 
+
+      <h3>Sleep & Rest</h3>
+      <p>
+        Sleep & Rest are the ultimate recovery tools. Most muscle repair and hormone release happens 
+        during deep sleep. Athletes aim for 7-9 hours, and many take naps between sessions. 
+        Poor sleep = poor performance.
+      </p>
+
+      <h3>Cold Therapy & Ice Baths</h3>
+      <p>
+        Cold Therapy & Ice Baths are used to reduce inflammation, muscle soreness, and speed recovery. 
+        After intense matches, athletes may sit in 10-15°C water for 10 minutes. While science debates its 
+        full effects, many swear by the psychological and physical reset it provides.
+      </p>
+      <img src="images/IceBath.jpeg" class="tempimg" > 
+
+      <h3>Massage & Foam Rolling</h3>
+      <p>
+        Massage & Foam Rolling break up muscle knots, improve blood flow, and reduce soreness. Foam rolling
+        helps reduce tension and prepares muscles for the next training day.
+      </p>
+      <img src="images/FoamRolling.jpeg" class="tempimg" > 
+
+
+    </section>
+
+    <!-- Page 4 -->
+    <section class="page" id="page4">
+      <h2>Mental Toughness and Focus Training</h2>
+      <h3>Focus & Concentration</h3>
+<p>
+  Focus & Concentration are trainable. Athletes practice blocking distractions (like crowd noise or nerves)
+   and staying locked in on tasks. Techniques like breathing exercises, counting focus reps, and routine 
+   building help sharpen concentration.
+  </p>
+
+<h3>Dealing with Pressure</h3>
+<p>
+  Dealing with Pressure is critical — whether it's a penalty kick or a final point. Athletes train under 
+  pressure (like time-limited drills or crowd simulations) to become comfortable being uncomfortable.
+</p>
+
+<h3>Visualization & Mental Rehearsal</h3>
+<p>
+  Visualization (aka mental rehearsal) involves imagining success before it happens. Athletes close their 
+  eyes and run through perfect executions — a sprinter sees themselves exploding off the blocks; a 
+  footballer imagines scoring. This primes the brain and builds confidence.
+</p>
+<img src="images/Visualisation.jpeg" class="tempimg" > 
+
+<h3>Emotional Control</h3>
+<p>
+  Emotional Control means keeping your cool. When things go wrong (missed chances, bad refs), mentally 
+  tough athletes don't spiral. They regulate emotions using breathing, reframing (focusing on what's 
+  controllable), and pre-set responses.
+</p>
+
+<h3>Self-Talk & Confidence</h3>
+<p>
+  Self-Talk & Confidence are internal tools. Repeating affirmations like “I've trained for this” or “I'm 
+  ready” help anchor athletes. Negative self-talk kills performance; positive self-talk boosts resilience.
+</p>
+<img src="images/SelfTalk&Confidence.png" class="tempimg" > 
+    </section>
+  </main>
+  <footer class="site-footer">
+  <p>Rysham | 240749P | © 2025 Athlete Essentials</p>
+</footer>
+</body>
+</html>

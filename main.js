@@ -78,7 +78,6 @@ function CheckOneAnswer(qnNo, correctAns) {
   }
 }
 
-
 // Catching game
 const durianId = document.getElementById("durianId");
 function GetRandom(min,max){
@@ -121,21 +120,4 @@ function Respawn(){
 }
 //link durian to mouseclick to durianCatch function
 durianId.addEventListener("click",durianCatch);
-
-
-// document.addEventListener("keydown",function(evt){
-// console.log(evt);
-// if(evt.code=="KeyT"){
-// durianId.classList.add("shrink");
-// }
-// if(evt.code=="KeyU"){
-// durianId.classList.remove("shrink");
-// }
-// if(evt.code=="KeyA"){
-// durianId.classList.add("anim1");
-// }
-// if(evt.code=="KeyB"){
-// durianId.classList.remove("anim1");
-// };
-// });
 

@@ -65,12 +65,12 @@ body {
   border-radius: 10px;
 }
 
-/* ✅ Show homepage by default */
+/* homepage by default */
 .homepage {
   display: block !important;
 }
 
-/* Image sizing (optional) */
+/* Image sizing */
 .tempimg2 {
   width: auto;
   height: auto;
@@ -81,20 +81,11 @@ body {
   height: 40px;
 }
 
-/* Optional styling for h2 */
+/* styling for h2 */
 .page h2 {
   font-size: 2em;
   color: #4a4e69;
 }
-
-/* .background-container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-} */
 
 /* Make homepage fullscreen background */
 body {
@@ -109,9 +100,9 @@ body {
   align-items: center;
   width: 100vw;
   height: 78vh; /* full screen height */
-  background-image: url('images/AthleteCover2.jpg');
-  background-size: cover;         /* ✅ cover full container */
-  background-position: center;    /* ✅ keep image centered */
+  background-image: url('images/athleteCover2.jpg');
+  background-size: cover;         
+  background-position: center;    
   background-repeat: no-repeat;
   position: relative;
   color: white;
@@ -120,7 +111,6 @@ body {
   padding: 0;
 }
 
-/* Optional — remove inherited .page limits */
 .page.homepage {
   max-width: none;
   padding: 0;
@@ -130,7 +120,6 @@ body {
 /* Overlay box (text on image) */
 .homepage-overlay {
   position: absolute;
-  /* Control layout of the words on the image */
   top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
@@ -139,7 +128,7 @@ body {
   border-radius: 10px;
 }
 
-/* Optional: Styling for text */
+/* Styling for text */
 .homepage-overlay h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
@@ -150,11 +139,9 @@ body {
 }
 
 /* Full screen toggle */
-/* h1{background:cyan;} */
 @media (max-width:800px){
 #qrCodeImg{display:none;} /*hide QR
 code when its mobile size */
-/* h1{background: lightgreen;} */
 h1::after{content:"(mobile)";}
 }
 
@@ -177,7 +164,6 @@ transition: all 0.5s;
 }
 #durianId.anim1{ animation: durianFrames 0.3s;}
 
-/* Nav wrapper to split left/right */
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -186,7 +172,6 @@ transition: all 0.5s;
   flex-wrap: wrap;
 }
 
-/* Left and right nav button groups */
 .nav-left,
 .nav-right {
   display: flex;
@@ -200,10 +185,9 @@ transition: all 0.5s;
 
 .nav-right {
   justify-content: flex-end;
-  margin-left: 100px; /* 👈 Adds space between last left button and fullscreen group */
+  margin-left: 100px; 
 }
 
-/* Unified button style for all nav buttons */
 .nav-left button,
 .nav-right button {
   background-color: #9a8c98;
@@ -232,7 +216,6 @@ transition: all 0.5s;
   width: 100%;
 } 
 
-/* RWD for iPads/tablets (width ≤ 1279px) */
 @media screen and (max-width: 1279px) {
   .main-header {
     flex-direction: column;
@@ -284,7 +267,6 @@ transition: all 0.5s;
   }
 }
 
-/* RWD for mobile phones (width ≤ 768px) */
 @media screen and (max-width: 768px) {
   .main-header h1 {
     font-size: 1.5em;
@@ -366,6 +348,6 @@ transition: all 0.5s;
   max-width: 80px;
 }
 #box {
-  position: relative; /* so the durian's absolute position is scoped inside */
-  overflow: hidden;   /* hides overflow just in case */
+  position: relative; 
+  overflow: hidden;   
 }

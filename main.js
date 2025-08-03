@@ -103,7 +103,7 @@ moveDurianItvId = setInterval(MoveDurian, 1000);// Speed of durian movement
 
 const scoreBox=document.getElementById("scoreBox");
 
-const popAudio = new Audio("Audio/popsound.mp3"); //create an new Audio Object using sound file
+const popAudio = new Audio("audio/popsound.mp3"); //create an new Audio Object using sound file
 
 var score=0; //to track how many clicks
 function durianCatch() {

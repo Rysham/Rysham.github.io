@@ -1,0 +1,13 @@
+{ "name": "WebDev ICA2 PWA",
+"short_name": "PWA",
+"start_url": "index.html",
+"display": "standalone",
+"background_color": "#ffffff",
+"theme_color": "#00FF00",
+"icons": [
+{ "src": "images/icons8-running-50.png",
+"sizes": "64x64",
+"type": "image/png"
+}
+]
+}

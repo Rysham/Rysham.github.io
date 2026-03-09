@@ -5,24 +5,38 @@ body {
   background-color: #f4f1ed;
   color: #333;
   text-align: justify;
+  scroll-behavior: smooth;
 }
 
 /* Header with inline nav */
 .main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #4a4e69;
   color: #fff;
   padding: 20px 40px;
-  flex-wrap: wrap; /* Ensures it breaks on small screens */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .main-header h1 {
   margin: 0;
   font-size: 2em;
-  flex: 1;
+  white-space: nowrap;
 }
 
 /* Inline navigation inside header */
@@ -39,7 +53,7 @@ body {
   margin: 0;
 }
 
-.inlineNav ul li button {
+.nav-link {
   background-color: #9a8c98;
   color: white;
   border: none;
@@ -47,295 +61,166 @@ body {
   font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
-  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.inlineNav ul li button:hover {
+.nav-link:hover {
   background-color: #c9ada7;
 }
 
-/* Page section styling */
-.page {
-  display: none;
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+/* Section styling */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
-/* homepage by default */
-.homepage {
-  display: block !important;
+.section:last-child {
+  border-bottom: none;
 }
 
-/* Image sizing */
-.tempimg2 {
-  width: auto;
-  height: auto;
-  margin-top: -40px;
-}
-.QRimg {
-  width: 40px;
-  height: 40px;
-}
-
-/* styling for h2 */
-.page h2 {
-  font-size: 2em;
-  color: #4a4e69;
-}
-
-/* Make homepage fullscreen background */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.homepage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 78vh; /* full screen height */
-  background-image: url('images/athletecover2.jpg');
-  background-size: cover;         
-  background-position: center;    
-  background-repeat: no-repeat;
-  position: relative;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.page.homepage {
+/* About section specific */
+.about-section {
+  background-color: #BFE9F9;
+  min-height: auto;
+  width: 100%;
   max-width: none;
-  padding: 0;
-  border: none;
+  margin: 0;
+  padding: 60px 20px;
 }
 
-/* Overlay box (text on image) */
-.homepage-overlay {
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
-  padding: 20px 30px;
-  border-radius: 10px;
-}
-
-/* Styling for text */
-.homepage-overlay h2 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-}
-
-.homepage-overlay p {
-  font-size: 1.2em;
-}
-
-/* Full screen toggle */
-@media (max-width:800px){
-#qrCodeImg{display:none;} /*hide QR
-code when its mobile size */
-h1::after{content:"(mobile)";}
-}
-
-
-
-/* Catching game */
-#durianId {position: relative;width:10vw; 
-transition: all 0.5s;
-} 
-#box{width:800px;height:700px;border:solid black 4px}
-/* vw is viewport. 10vw is 10% of the viewport. */
-#durianId.shrink{width:5vw;opacity: 0;}
-@keyframes durianFrames{
-0%{rotate:0}
-20%{rotate:72deg}
-40%{rotate:144deg}
-60%{rotate:216deg}
-80%{rotate:288deg}
-100%{rotate:360deg}
-}
-#durianId.anim1{ animation: durianFrames 0.3s;}
-
-.nav-wrapper {
+.about-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-image {
+  flex: 0 0 300px;
+}
+
+.profile-img {
   width: 100%;
-  flex-wrap: wrap;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.about-info p {
+  margin: 10px 0;
+  font-size: 1.2em;
 }
 
-.nav-left {
-  justify-content: flex-start;
+.about-info strong {
+  color: #4a4e69;
 }
 
-.nav-right {
-  justify-content: flex-end;
-  margin-left: 100px; 
+/* styling for headings */
+.section h2 {
+  font-size: 2em;
+  color: #4a4e69;
+  margin-top: 0;
 }
 
-.nav-left button,
-.nav-right button {
-  background-color: #9a8c98;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  font-size: 1em;
-  border-radius: 5px;
-  cursor: pointer;
-  white-space: nowrap;
+.section h3 {
+  color: #4a4e69;
+  margin-top: 30px;
+  border-bottom: 2px solid #c9ada7;
+  padding-bottom: 4px;
 }
 
-.nav-left button:hover,
-.nav-right button:hover {
-  background-color: #c9ada7;
+.section h4 {
+  color: #9a8c98;
+  margin-top: 15px;
 }
 
-/* Footer*/
+/* Footer */
 .site-footer {
   background-color: #4a4e69;
   color: white;
   text-align: center;
   padding: 19px;
   font-size: 0.9em;
-  margin-top: 0px;
   width: 100%;
-} 
+}
 
+/* QR code image */
+.QRimg {
+  width: 100px;
+  height: 100px;
+}
+
+/* Hide QR on mobile */
+@media (max-width: 800px) {
+  #qrCodeImg { display: none; }
+}
+
+/* Tablet */
 @media screen and (max-width: 1279px) {
   .main-header {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 20px;
   }
 
-  .nav-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
+  .nav-left {
+    gap: 20px;
   }
 
-  .nav-left,
-  .nav-right {
-    justify-content: flex-start;
-    margin-left: 0;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .page {
-    padding: 30px 10px;
-    max-width: 95%;
-  }
-
-  .homepage-overlay {
-    width: 90%;
-    font-size: 0.9em;
-  }
-
-  .tempimg {
-    width: 100%;
-    height: auto;
-  }
-}
-@media screen and (max-width: 1279px) {
-  #box {
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    border: solid black 4px;
-    margin: auto;
-    padding: 10px;
-  }
-
-  #durianId {
-    width: 10vw;
-    max-width: 80px;
+  .section {
+    padding: 40px 15px;
   }
 }
 
+/* Mobile */
 @media screen and (max-width: 768px) {
   .main-header h1 {
     font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .inlineNav ul {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .inlineNav ul li {
+    flex: 1;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
     text-align: center;
   }
 
-  .nav-wrapper {
-    flex-direction: column;
-    align-items: stretch;
+  .about-image {
+    flex: 0 0 auto;
+    width: 250px;
   }
 
-  .nav-left,
-  .nav-right {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .nav-left button,
-  .nav-right button {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .homepage-overlay h2 {
-    font-size: 1.8em;
-  }
-
-  .homepage-overlay p {
-    font-size: 1em;
-  }
-
-  .page {
-    padding: 20px 10px;
-    font-size: 0.95em;
-  }
-
-  #box {
-    width: 100%;
-    height: auto;
-  }
-
-  #durianId {
-    width: 20vw;
-  }
-
-  .tempimg,
-  .QRimg {
-    width: 100%;
-    height: auto;
-  }
-
-  fieldset {
-    font-size: 1em;
-  }
-
-  #scorebox {
-    font-size: 1.2em;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 768px) {
-  .homepage-overlay {
-    width: 90%;
-    font-size: 0.85em;
-    padding: 10px 15px;
-    max-height: 60%;
-    overflow: auto;
+  .section {
+    padding: 30px 15px;
   }
 
   .QRimg {
@@ -343,11 +228,24 @@ transition: all 0.5s;
     height: 30px;
   }
 }
-#durianId {
-  position: absolute;
-  max-width: 80px;
+
+/* Video styling */
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
-#box {
-  position: relative; 
-  overflow: hidden;   
+
+video:hover {
+  transform: scale(1.02);
+}
+
+/* Make videos responsive */
+@media screen and (max-width: 768px) {
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
 }
